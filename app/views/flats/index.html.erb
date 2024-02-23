@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+   <h2>Simple Airbnb</h2>
+  <%# <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form> %>
+</nav>
+<div class="container">
+  <div id="flats">
+    <h1>All our Flats (<%=@flats.length%>)</h1>
+    <div class="card-group">
+      <% @flats.each do |flat| %>
+        <%= render flat %>
+      <% end %>
+    </div>
+  </div>
+
+</div>
